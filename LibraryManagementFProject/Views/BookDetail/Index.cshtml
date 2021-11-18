@@ -1,0 +1,65 @@
+﻿@model IEnumerable<BookDetails>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Library Management</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/ProductIndexStyleSheet.css" />
+</head>
+<body class="content-table thead-tr">
+
+    <h2>BookDetail</h2>
+
+    <form asp-action="Index" method="get">
+        <div class="form-actions no-color">
+            <p>
+                Find by name: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+                <input type="submit" value="Search" class="btn btn-default" />
+                <a asp-action="Index">Back to Full List</a>
+            </p>
+        </div>
+    </form>
+    <br />
+    <div style="display: block">
+        <a href="/BookDetail/InsertBookDetail/">Create a New Book</a>
+    </div>
+    <br />
+
+    <h1></h1>
+    <table class="table">
+        <tr>
+            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["AuthorIDSortParam"]">@Html.DisplayNameFor(book => book.AuthorID)</a></th>
+            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["FirstNameSortParam"]">@Html.DisplayNameFor(book => book.FirstName)</a></th>
+            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["LastNameSortParam"]">@Html.DisplayNameFor(book => book.LastName)</a></th>
+            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["ISBNCodeSortParam"]">@Html.DisplayNameFor(book => book.ISBN_Code)</a></th>
+            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["BookTitleSortParam"]">@Html.DisplayNameFor(book => book.Book_Title)</a></th>
+            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["PublicationYearSortParam"]">@Html.DisplayNameFor(book => book.Publication_year)</a>
+            <th>Date Checkedout</th>
+            <th>Date Returned</th>
+            <th>Book Image </th>
+        </tr>
+
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td><a href=/BookDetail/ViewBookDetail/@book.AuthorID>@book.AuthorID</a></td>
+                <td>@book.FirstName</td>
+                <td>@book.LastName</td>
+                <td>@book.ISBN_Code</td>
+                <td>@book.Book_Title</td>
+                <td>@book.Publication_year</td>
+                <td>@book.Date_checkedout</td>
+                <td>@book.Date_returned</td>
+               
+                <td><img src="~/imgs/bookcover.png"/></td>
+                
+            </tr>
+              
+            }
+        </table>
+</body>
+</html>
+

@@ -4,4 +4,42 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\css\CustomStyleSheet.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Bootstrap\css\bootstrap.min.css" />
+    <None Include="wwwroot\Bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\Bootstrap\js\jquery.3.4.1.js" />
+    <None Include="wwwroot\Bootstrap\js\popper.min.js" />
+    <None Include="wwwroot\imgs\adminuser.png" />
+    <None Include="wwwroot\imgs\book-online.png" />
+    <None Include="wwwroot\imgs\books.png" />
+    <None Include="wwwroot\imgs\books1 %281%29.png" />
+    <None Include="wwwroot\imgs\books1.png" />
+    <None Include="wwwroot\imgs\Darkest Evening.jpg" />
+    <None Include="wwwroot\imgs\defaulters-list.png" />
+    <None Include="wwwroot\imgs\digital-data.png" />
+    <None Include="wwwroot\imgs\digital-inventory.png" />
+    <None Include="wwwroot\imgs\generaluser.png" />
+    <None Include="wwwroot\imgs\home-bg.jpg" />
+    <None Include="wwwroot\imgs\in-homepage-banner.jpg" />
+    <None Include="wwwroot\imgs\library.png" />
+    <None Include="wwwroot\imgs\publisher.png" />
+    <None Include="wwwroot\imgs\search-online.png" />
+    <None Include="wwwroot\imgs\Searcher.jpg" />
+    <None Include="wwwroot\imgs\sign-up.png" />
+    <None Include="wwwroot\imgs\Spring.jpg" />
+    <None Include="wwwroot\imgs\Stars.jpg" />
+    <None Include="wwwroot\imgs\Underground.jpg" />
+    <None Include="wwwroot\imgs\World.jpg" />
+    <None Include="wwwroot\imgs\writer.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="MySql.Data" Version="8.0.27" />
+  </ItemGroup>
+
 </Project>
