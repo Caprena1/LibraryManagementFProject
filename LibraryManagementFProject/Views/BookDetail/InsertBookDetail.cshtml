@@ -11,15 +11,11 @@
     <label asp-for="LastName" class="control-label">Last Name</label>
     <input type="text" name="LastName" class="form-control" value="" />
     <label asp-for="ISBN_Code" class="control-label">ISBN Code</label>
-    <input type="number" step="0.01" name="IDBN_Code" class="form-control" />
+    <input type="number" name="IDBN_Code" class="form-control" />
     <label asp-for="Book_Title" class="control-label">Book Title</label>
     <input type="text" name="Book_Title" class="form-control" value="" />
-    @*<label asp-for="Date_checkedout" class="control-label">Date Checkedout</label>
-    <input type="text" name="Date_checkedout" class="form-control" value="" />
-    <label asp-for="Date_returned" class="control-label">Date Returned</label>
-    <input type="text" name="Date_returned" class="form-control" value="" />*@
-    
-
+    <label asp-for="Publication_year" class="control-label">Publication Year</label>
+    <input type="number" name="Publication_year" class="form-control" />
 
     <input type="submit" value="Create Book" class="btn btn-primary" />
 }

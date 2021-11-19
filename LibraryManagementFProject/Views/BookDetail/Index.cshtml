@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Library Management</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/ProductIndexStyleSheet.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body class="content-table thead-tr">
 
@@ -29,9 +29,9 @@
     <br />
 
     <h1></h1>
-    <table class="table">
-        <tr>
-            <th><a asp-action="Index" asp-route-sortOrder="@ViewData["AuthorIDSortParam"]">@Html.DisplayNameFor(book => book.AuthorID)</a></th>
+    <table class="table" style= font-size:17px>
+        <tr style="background-color:chocolate; text-justify; color: royalblue">
+            <th ><a asp-action="Index" asp-route-sortOrder="@ViewData["AuthorIDSortParam"]">@Html.DisplayNameFor(book => book.AuthorID)</a></th>
             <th><a asp-action="Index" asp-route-sortOrder="@ViewData["FirstNameSortParam"]">@Html.DisplayNameFor(book => book.FirstName)</a></th>
             <th><a asp-action="Index" asp-route-sortOrder="@ViewData["LastNameSortParam"]">@Html.DisplayNameFor(book => book.LastName)</a></th>
             <th><a asp-action="Index" asp-route-sortOrder="@ViewData["ISBNCodeSortParam"]">@Html.DisplayNameFor(book => book.ISBN_Code)</a></th>

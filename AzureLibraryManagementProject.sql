@@ -1,0 +1,1 @@
+SELECT * FROM librarymanagement.book_details;
